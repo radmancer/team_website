@@ -15,7 +15,7 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,12 +40,30 @@ body, html {
   min-height: 400px;
 }
 
+/* Third image (Contact) */
+.bgimg-4 {
+  background-image: url("css/images/godism.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-5 {
+  background-image: url("css/images/godism.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-6 {
+  background-image: url("css/images/godism.jpg");
+  min-height: 400px;
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6  {
     background-attachment: scroll;
     min-height: 400px;
   }
@@ -59,7 +77,7 @@ body, html {
     <h3 class="w3-wide"><b>LOGO</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="#interactiveArt" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+    <a href="#interactiveArt" class="w3-button w3-block w3-white w3-left-align" id="myBtn" onclick="w3_close();">
       Interactive Art</i>
     </a>
     <div id="interactiveArtAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
@@ -69,7 +87,7 @@ body, html {
       <a href="#" class="w3-bar-item w3-button">I Have A Home Here</a>
       <a href="#" class="w3-bar-item w3-button">Trash & Weeds</a>
     </div>
-    <a href="#ledArt" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+    <a href="#ledArt" class="w3-button w3-block w3-white w3-left-align" id="myBtn" onclick="w3_close();">
       LED Art</i>
     </a>
     <div class="w3-bar-block w3-hide w3-padding-large w3-medium">
@@ -77,25 +95,31 @@ body, html {
       <a href="#" class="w3-bar-item w3-button">Phat Swing</a>
       <a href="#" class="w3-bar-item w3-button">Artists in the tree</a>
     </div>
-    <a href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+    <a href="#plantArt" class="w3-button w3-block w3-white w3-left-align" id="myBtn" onclick="w3_close();">
       Plant Art</i>
     </a>
-    <div id="plantArt" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+    <div class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Installation 1</a>
       <a href="#" class="w3-bar-item w3-button">Installation 2</a>
     </div>
-    <a href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+    <a href="#exhibits" class="w3-button w3-block w3-white w3-left-align" id="myBtn" onclick="w3_close();">
       Exhibits</i>
     </a>
-    <div id="exhibits" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+    <div class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Exhibit 1</a>
       <a href="#" class="w3-bar-item w3-button">Exhibit 2</a>
     </div>
-    <a href="#" class="w3-bar-item w3-button">In the Media</a>
-    <a href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+    <a href="#inTheMedia" class="w3-button w3-block w3-white w3-left-align" id="myBtn" onclick="w3_close();">
+        In The Media</i>
+      </a>
+      <div class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Exhibit 1</a>
+        <a href="#" class="w3-bar-item w3-button">Exhibit 2</a>
+      </div>
+    <a href="#team" class="w3-button w3-block w3-white w3-left-align" id="myBtn" onclick="w3_close();">
       The Team</i>
     </a>
-    <div id="team" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+    <div class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Chris Castillo</a>
       <a href="#" class="w3-bar-item w3-button">Kyle Reed</a>
       <a href="#" class="w3-bar-item w3-button">Scott McDowell</a>
@@ -110,9 +134,7 @@ body, html {
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-black w3-xlarge">
-  <div class="w3-bar-item w3-wide" style="padding-top:0px;padding-bottom:0px;">LOGO | </div>
-  <a href="#interactiveArt"><div class="w3-bar-item w3-wide" style="padding-top:0px;padding-bottom:0px;">INTERACTIVE ART | </div></a>
-  <a href="#ledArt"><div class="w3-bar-item w3-wide" style="padding-top:0px;padding-bottom:0px;">LED ART</div></a>
+  <div class="w3-bar-item w3-wide" style="padding-top:0px;padding-bottom:0px;">LOGO</div>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right" style="padding-top:0px;padding-bottom:0px;" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 </header>
 
@@ -282,6 +304,178 @@ body, html {
     </div>
   </div>
 </div>
+
+<!-- Forth Parallax Image with Portfolio Text -->
+<a name="plantArt">
+    <div class="bgimg-4 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">PLANT ART</span>
+      </div>
+    </div>
+  </a>
+  
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">WHERE I WORK</h3>
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+  
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col m4 w3-container">
+        <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+      </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+        </div>
+        <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-right w3-section" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- Forth Parallax Image with Portfolio Text -->
+<a name="exhibits">
+    <div class="bgimg-4 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">EXHIBITS</span>
+      </div>
+    </div>
+  </a>
+  
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">WHERE I WORK</h3>
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+  
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col m4 w3-container">
+        <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+      </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+        </div>
+        <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-right w3-section" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- Fifth Parallax Image with Portfolio Text -->
+<a name="inTheMedia">
+    <div class="bgimg-4 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">IN THE MEDIA</span>
+      </div>
+    </div>
+  </a>
+  
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">WHERE I WORK</h3>
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+  
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col m4 w3-container">
+        <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+      </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+        </div>
+        <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-right w3-section" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- Sixth Parallax Image with Portfolio Text -->
+<a name="team">
+    <div class="bgimg-4 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">TEAM</span>
+      </div>
+    </div>
+  </a>
+  
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">WHERE I WORK</h3>
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+  
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col m4 w3-container">
+        <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+      </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+        </div>
+        <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-right w3-section" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
