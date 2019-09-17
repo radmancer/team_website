@@ -36,7 +36,7 @@ body, html {
 
 /* Third image (Contact) */
 .bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
+  background-image: url("css/images/jameson.jpg");
   min-height: 400px;
 }
 
@@ -59,8 +59,8 @@ body, html {
     <h3 class="w3-wide"><b>LOGO</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a onclick="myAccFunc('interactiveArtAcc')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      Interactive Art <i class="fa fa-caret-down"></i>
+    <a href="#interactiveArt" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Interactive Art</i>
     </a>
     <div id="interactiveArtAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>iSheep</a>
@@ -69,31 +69,31 @@ body, html {
       <a href="#" class="w3-bar-item w3-button">I Have A Home Here</a>
       <a href="#" class="w3-bar-item w3-button">Trash & Weeds</a>
     </div>
-    <a onclick="myAccFunc('ledArt')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      LED Art <i class="fa fa-caret-down"></i>
+    <a href="#ledArt" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      LED Art</i>
     </a>
-    <div id="ledArt" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+    <div class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Godism</a>
       <a href="#" class="w3-bar-item w3-button">Phat Swing</a>
       <a href="#" class="w3-bar-item w3-button">Artists in the tree</a>
     </div>
-    <a onclick="myAccFunc('plantArt')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      Plant Art <i class="fa fa-caret-down"></i>
+    <a href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Plant Art</i>
     </a>
     <div id="plantArt" class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Installation 1</a>
       <a href="#" class="w3-bar-item w3-button">Installation 2</a>
     </div>
-    <a onclick="myAccFunc('exhibits')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      Exhibits <i class="fa fa-caret-down"></i>
+    <a href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Exhibits</i>
     </a>
     <div id="exhibits" class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Exhibit 1</a>
       <a href="#" class="w3-bar-item w3-button">Exhibit 2</a>
     </div>
     <a href="#" class="w3-bar-item w3-button">In the Media</a>
-    <a onclick="myAccFunc('team')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      The Team <i class="fa fa-caret-down"></i>
+    <a href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      The Team</i>
     </a>
     <div id="team" class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Chris Castillo</a>
@@ -177,11 +177,13 @@ body, html {
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+<a name="interactiveArt">
+  <div class="bgimg-2 w3-display-container">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">INTERACTIVE ART</span>
+    </div>
   </div>
-</div>
+</a>
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
@@ -237,11 +239,13 @@ body, html {
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+<a name="ledArt">
+  <div class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">LED ART</span>
+    </div>
   </div>
-</div>
+</a>
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
@@ -333,16 +337,6 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.visibility = "hidden";
   document.getElementById("myOverlay").style.display = "none";
-}
-
-// Accordion 
-function myAccFunc(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
 }
 </script>
 
