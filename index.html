@@ -59,25 +59,50 @@ body, html {
     <h3 class="w3-wide"><b>LOGO</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="#" class="w3-bar-item w3-button">Shirts</a>
-    <a href="#" class="w3-bar-item w3-button">Dresses</a>
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      Jeans <i class="fa fa-caret-down"></i>
+    <a onclick="myAccFunc('interactiveArtAcc')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Interactive Art <i class="fa fa-caret-down"></i>
     </a>
-    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Skinny</a>
-      <a href="#" class="w3-bar-item w3-button">Relaxed</a>
-      <a href="#" class="w3-bar-item w3-button">Bootcut</a>
-      <a href="#" class="w3-bar-item w3-button">Straight</a>
+    <div id="interactiveArtAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>iSheep</a>
+      <a href="#" class="w3-bar-item w3-button">A Migration Tale</a>
+      <a href="#" class="w3-bar-item w3-button">Figment Boat</a>
+      <a href="#" class="w3-bar-item w3-button">I Have A Home Here</a>
+      <a href="#" class="w3-bar-item w3-button">Trash & Weeds</a>
     </div>
-    <a href="#" class="w3-bar-item w3-button">Jackets</a>
-    <a href="#" class="w3-bar-item w3-button">Gymwear</a>
-    <a href="#" class="w3-bar-item w3-button">Blazers</a>
-    <a href="#" class="w3-bar-item w3-button">Shoes</a>
+    <a onclick="myAccFunc('ledArt')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      LED Art <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="ledArt" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Godism</a>
+      <a href="#" class="w3-bar-item w3-button">Phat Swing</a>
+      <a href="#" class="w3-bar-item w3-button">Artists in the tree</a>
+    </div>
+    <a onclick="myAccFunc('plantArt')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Plant Art <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="plantArt" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Installation 1</a>
+      <a href="#" class="w3-bar-item w3-button">Installation 2</a>
+    </div>
+    <a onclick="myAccFunc('exhibits')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Exhibits <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="exhibits" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Exhibit 1</a>
+      <a href="#" class="w3-bar-item w3-button">Exhibit 2</a>
+    </div>
+    <a href="#" class="w3-bar-item w3-button">In the Media</a>
+    <a onclick="myAccFunc('team')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      The Team <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="team" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Chris Castillo</a>
+      <a href="#" class="w3-bar-item w3-button">Kyle Reed</a>
+      <a href="#" class="w3-bar-item w3-button">Scott McDowell</a>
+      <a href="#" class="w3-bar-item w3-button">Wade Hunter</a>
+    </div>
   </div>
-  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
-  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -311,8 +336,8 @@ function w3_close() {
 }
 
 // Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
+function myAccFunc(id) {
+  var x = document.getElementById(id);
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else {
